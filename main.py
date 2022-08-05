@@ -1,6 +1,8 @@
 
 
+
 import logging
+from unittest import result
 logging.basicConfig(level=logging.DEBUG)
 
 
@@ -14,7 +16,13 @@ def multiply(*args):
 
 #Funkcja dodająca
 def add(*args):
-    return sum(args)
+    logging.info("Ok czyli dodajemy")
+    n=int(input("Ile liczb bedziesz dodawał: "))
+    list1 =[]
+    for i in range(n):
+        numbers= int(input(f"Liczba {i+1}:"))
+        list1.append(numbers)
+    return print(f"Wynik to {sum(list1)}")
 
 #Funkcja odejmująca
 def subtract(x, y):
@@ -41,11 +49,11 @@ def check(*args):
 logging.info("Witaj, ten program pomoże Tobie wykonać obliczenia. Wybierz rodzaj:)")
 choice=input("(1)Dodawanie,(2)Odejmowanie,(3)Mnożenie,(4)Dzielenie :")
 if choice == '1':
-    logging.info("Ok czyli dodajemy")
-    logging.info(numbers=input("Podaj liczby które chcesz do siebie dodać"))
+    result=add()
+    
     
 if choice == '2':
-    print("Ok a wiec odejmujmy")
+    logging.info("Ok a wiec odejmujmy")
     x=int(input("Podaj pierwsza liczbę:"))
     y=int(input("Podaj druga liczbe:"))
     
@@ -54,4 +62,4 @@ if choice == '2':
  
     logging.debug("Wynik to: %d" % subtract(x,y))
 
-#print(example)
+
