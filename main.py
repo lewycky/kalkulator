@@ -19,13 +19,20 @@ def subtract(x, y):
     return print('Wynik odejmowania to: %s' % score)
      
 def multiply(*args):
-    result = 1
     
-    for x in args:
-        result *= x
-    return result   
+    for i in args:
+        if type(i) == str:
+            print(f"Argument {i} nie jest liczbą")
+            print("Obliczenie nie jest możliwe")
+            break
+        else:
+            print(f"Argument {i} jest liczbą")
+                 ### po przerwie zajac sie szukaniem tutaj 
+            
+              
+ 
+        
+           
 
+multiply(12,"321")
 
-print(multiply(13,12))
-
-    
