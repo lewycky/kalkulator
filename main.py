@@ -38,9 +38,21 @@ def check(*args):
                 
             
 
-                      
 
 
-example=check(30,20,10)
+
+print("Witaj, ten program pomoże Tobie wykonać obliczenia. Wybierz rodzaj:)")
+choice=input("(1)Dodawanie,(2)Odejmowanie,(3)Mnożenie,(4)Dzielenie :")
+if choice == '1':
+    print("Ok czyli dodajemy")
+    numbers=input("Podaj liczby które chcesz do siebie dodać")
+if choice == '2':
+    print("Ok a wiec odejmujmy")
+    x=int(input("Podaj pierwsza liczbę:"))
+    y=int(input("Podaj druga liczbe:"))
+    
+    check(x,y) 
+    print("Wynik to", subtract(x,y))
+
 
 #print(example)
