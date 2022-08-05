@@ -4,35 +4,43 @@ import logging
 import operator
 import math
 
+#Funkcja mnożąca
+def multiply(*args):
+    result = 1     
+    for x in args:
+        result *= x
+    return result
 
-
+#Funkcja dodająca
 def add(*args):
-
     return sum(args)
 
+#Funkcja odejmująca
 def subtract(x, y):
-    
-    if type(x) == int and type(y) == int:
-         print("Podane wartości są liczbami!")
-             
-    score=x-y
-    return print('Wynik odejmowania to: %s' % score)
-     
-def multiply(*args):
-    
+    return x-y
+
+#Funkcja dzieląca:
+def divide(x, y):
+    return x/y
+
+#Funkcja sprawdzająca argumenty    
+def check(*args):
+        
     for i in args:
         if type(i) == str:
-            print(f"Argument {i} nie jest liczbą")
+            print(f"Argument {i} jest stringiem")
             print("Obliczenie nie jest możliwe")
             break
         else:
             print(f"Argument {i} jest liczbą")
-                 ### po przerwie zajac sie szukaniem tutaj 
+
+      
+                
             
-              
- 
-        
-           
 
-multiply(12,"321")
+                      
 
+
+example=check(30,20,10)
+
+#print(example)
